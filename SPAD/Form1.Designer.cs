@@ -44,11 +44,11 @@ namespace SPAD
             // 
             this.lblAppLogo.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.lblAppLogo.BackColor = System.Drawing.Color.Firebrick;
-            this.lblAppLogo.Font = new System.Drawing.Font("Calibri", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAppLogo.Font = new System.Drawing.Font("Calibri", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAppLogo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblAppLogo.Location = new System.Drawing.Point(1, 1);
             this.lblAppLogo.Name = "lblAppLogo";
-            this.lblAppLogo.Size = new System.Drawing.Size(1292, 79);
+            this.lblAppLogo.Size = new System.Drawing.Size(1292, 133);
             this.lblAppLogo.TabIndex = 0;
             this.lblAppLogo.Text = "SPAD";
             this.lblAppLogo.Click += new System.EventHandler(this.label1_Click);
@@ -77,6 +77,7 @@ namespace SPAD
             this.btnCleanData.TabIndex = 2;
             this.btnCleanData.Text = "Clean Data";
             this.btnCleanData.UseVisualStyleBackColor = false;
+            this.btnCleanData.Click += new System.EventHandler(this.btnCleanData_Click);
             // 
             // btnDownload
             // 
@@ -112,6 +113,7 @@ namespace SPAD
             this.dgItems.RowTemplate.Height = 24;
             this.dgItems.Size = new System.Drawing.Size(1092, 481);
             this.dgItems.TabIndex = 5;
+            this.dgItems.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgItems_CellContentClick);
             // 
             // btnSave
             // 
@@ -129,9 +131,9 @@ namespace SPAD
             // txtFile
             // 
             this.txtFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFile.Location = new System.Drawing.Point(192, 147);
+            this.txtFile.Location = new System.Drawing.Point(1018, 152);
             this.txtFile.Name = "txtFile";
-            this.txtFile.Size = new System.Drawing.Size(622, 30);
+            this.txtFile.Size = new System.Drawing.Size(266, 30);
             this.txtFile.TabIndex = 7;
             // 
             // SPADProject
@@ -149,7 +151,6 @@ namespace SPAD
             this.Controls.Add(this.lblAppLogo);
             this.Name = "SPADProject";
             this.Text = "SPADproj";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgItems)).EndInit();
             this.ResumeLayout(false);

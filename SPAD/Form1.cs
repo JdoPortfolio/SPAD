@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +21,7 @@ namespace SPAD
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            //dgItems.Visible = false;
 
         }
 
@@ -39,7 +41,7 @@ namespace SPAD
             {
                 OpenFileDialog dialog = new OpenFileDialog();
                 dialog.ShowDialog();
-                int ImportedRecord = 0, inValidItem = 0;
+                int ImportedRecord = 0;//inValidItem = 0;
                 string SourceURl = "";
                 if (dialog.FileName != "")
                 {
@@ -91,6 +93,7 @@ namespace SPAD
             {
                 MessageBox.Show("Exception " + ex);
             }
+            //dgItems.Visible = true;
         }
         public static DataTable GetDataTabletFromCSVFile(string csv_file_path)
         {
@@ -134,7 +137,6 @@ namespace SPAD
             }
             return csvData;
     }
-
         private void btnSave_Click(object sender, EventArgs e)
         {
             try
@@ -267,6 +269,15 @@ namespace SPAD
                     return false;
                 }
             }
+        }
+
+        private void btnCleanData_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void dgItems_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+         
         }
     }
 }
