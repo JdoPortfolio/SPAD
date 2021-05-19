@@ -48,7 +48,7 @@ namespace SPAD
             this.lblAppLogo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblAppLogo.Location = new System.Drawing.Point(1, 1);
             this.lblAppLogo.Name = "lblAppLogo";
-            this.lblAppLogo.Size = new System.Drawing.Size(1292, 133);
+            this.lblAppLogo.Size = new System.Drawing.Size(1295, 133);
             this.lblAppLogo.TabIndex = 0;
             this.lblAppLogo.Text = "SPAD";
             this.lblAppLogo.Click += new System.EventHandler(this.label1_Click);
